@@ -1,0 +1,29 @@
+modules:
+  jira:projectPage:
+    - key: jira-forge-custom-ui-project-page-allow-access-hello-world-project-page
+      resource: main
+      resolver:
+        function: resolver
+      title: jira-forge-custom_ui-project_page-allow_access
+  function:
+    - key: resolver
+      handler: index.handler
+
+permissions:
+  content:
+    styles:
+      - 'unsafe-inline'
+    scripts:
+      - 'unsafe-hashes'
+      - 'unsafe-inline'
+  external:
+    scripts:
+      - 'https://www.gstatic.com'
+    styles:
+      - 'https://www.gstatic.com'
+
+resources:
+  - key: main
+    path: static/app/build
+app:
+  id: ari:cloud:ecosystem::app/807dac21-6dbb-4071-96eb-6b10344f4bdb
